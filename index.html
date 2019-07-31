@@ -1,0 +1,84 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Brahms Travel Agency</title>
+  <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+  <!-- Add icon library -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="assets/css/hotels.css">
+</head>
+
+<body>
+  <div class="top-bar" id="realEstateMenu">
+    <div class="top-bar-left">
+      <ul class="menu" data-responsive-menu="accordion">
+        <li class="menu-text">Your Journey starts here</li>
+        <li><a href="#">Flights</a></li>
+        <li><a href="#">Hotels</a></li>
+        <li><a href="#">Tours</a></li>
+      </ul>
+    </div>
+    <div class="top-bar-right">
+      <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    <div class="large-12 columns">
+      <p class="lead">Contact</p>
+      <ul class="menu vertical">
+        <li><a href="https://www.twitter.com/"><i class="fa fa-twitter"></i> Twitter</a></li>
+        <li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i> Facebook</a></li>
+        <li><a href="https://www.instagram.com/"><i class="fa fa-instagram"></i> Instagram</a></li>
+        <li><a href="https://www.pinterest.com/"><i class="fa fa-pinterest"></i> Pinterest</a></li>
+      </ul>
+    </div>
+    <div class="row">
+        <ul class="menu float-center">
+          <li class="menu-text">Copyright: 2019 BraHMS</li>
+        </ul>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+  <script>
+    $(document).foundation();
+
+    function buildQueryURL() {
+
+      var queryURL = "https://apidojo-booking-v1.p.rapidapi.com/properties/get-static-map?currency_code=USD&languagecode=en-us&width=720&longitude=106.663626&zoom=18&latitude=10.807570&height=280";
+
+      var queryParams = { "api-key": "4d3bb0e243mshe2c57ba111b88e0p1b4105jsnb4a4be1d2a00" };
+
+      queryParams.q = $("#destinations").val().trim();
+
+      var startDate = $("#startDate").val().trim();
+
+      if (parseInt(startDate)) {
+        queryParams.begin_date = startDate + "0101";
+      }
+
+      var endDate = $("#endDate").val().trim();
+
+      if (parseInt(endDate)) {
+        queryParams.end_date = endDate + "0101";
+      }
+
+
+      // Logging the URL so we have access to it for troubleshooting
+      console.log("---------------\nURL: " + queryURL + "\n---------------");
+      console.log(queryURL + $.param(queryParams));
+      return queryURL + $.param(queryParams);
+
+    }
+
+  </script>
+</body>
+
+</html>

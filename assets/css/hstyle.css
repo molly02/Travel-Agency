@@ -1,0 +1,49 @@
+
+body {
+	background-color: aqua;
+}
+.jumbotron{
+	/*padding: 1%;*/
+	background-color: #5cb85c;
+	color: #ffffff;
+	background-image: url(https://architecturetourchicago.com/wp-content/uploads/2018/04/town-night-chicago-states-united-the-river1.jpg);
+	background-size: cover ;
+}
+
+/* #movies:hover{
+	padding: 3%;
+	float: left;
+
+	transform:  scale(2) translate(2);
+	transition: ease-in ;
+}
+ƒ
+div img:hover{
+	margin-bottom: 2%;
+	/* transform:  scale(2) translate(2);
+	transition: ease-in ; */
+/* } */ *
+
+#movies{
+	padding: 3%;
+	float: left;
+	/* transform: scale(1.1) translateX(10px);
+	transition: transform ease-in .3s;
+	z-index: 5; */
+	}
+/* #movies img{
+	padding: 3%;
+	width: 45%;
+	height: 45%;
+
+	/* transform: scale(1);
+	transition: transform ease-in .15s;
+	z-index: 1; */ */
+	/* } */
+button {
+    background-color: #5cb85c;
+	color: #ffffff;
+}
+.alls{
+	float: left;
+}
