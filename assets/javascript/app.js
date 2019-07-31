@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
 	var movies = ["New York", "Miami", "Baltimore", "Chicago"];
 	var movie = [];
@@ -85,6 +86,7 @@ $(document).ready(function () {
 	});
 
 });
+
 
 
 
