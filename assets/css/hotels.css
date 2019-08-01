@@ -11,10 +11,7 @@
     body, html {
         height: auto;
     }
-    /* .leada {
-        color: honeydew;
-    } */
-    
+   
     .lead {
         text-align: -webkit-center;
     }
@@ -26,5 +23,4 @@
     }
     .menu{
         display: -webkit-inline-box;
-        /* float: left; */
     }
