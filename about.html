@@ -7,7 +7,9 @@
   <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
   <!-- Add icon library -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/hotels.css">
+ <!--
+<link rel="stylesheet" type="text/css" href="assets/css/hotels.css">
+ --> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
@@ -41,7 +43,59 @@
   </div>
 
   </div>
+
+  <body>
+
+    <!-- <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>-->
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     <script type= "text/javascript" src="assets/javascript/about.js"></script>
+     
+     <form id="location-form">
  
+         <!-- Label for Text Box -->
+         <label for="location-input">Search your Location</label>
+     
+         <!-- Text Input Box -->
+         <input type="text" id="location-input"><br>
+     
+         <!-- Submit Button -->
+         <input id="select-location" type="submit" value="Search">
+       </form>
+ 
+ 
+ 
+  <!--
+ <form>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Search for a Location</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="location">
+      </div>
+      <button type="button" class="btn btn-info">Submit</button>
+  
+    </form>
+ 
+ -->   
+ 
+ <h2>Popular Destinations</h2>
+   </br>
+     <button data-location="Paris">Paris</button>
+ 
+ 
+ <div id="locations-appear-here"></div>
+ 
+ <!--append into these!-->
+ </br>
+ <div class="row small-up-1 medium-up-2 large-up-3">
+     <div class="column">
+         <div class="callout">
+             <p>Place1</p>
+             <p><img src="https://placehold.it/400x370&text=image1" alt="image"></p>
+             <p class="lead"><a href="#">Link to Site</a></p>
+             <p class="subheader">MoreInfo</p>
+         </div>
+     </div>
+ <!--
+
   <footer>
     <div class="row expanded callout secondary">
       <div class="small-6 large-3 columns">
@@ -95,6 +149,8 @@
   <script>
     $(document).foundation();
   </script>
+ -->
+
 </body>
 
 </html>
