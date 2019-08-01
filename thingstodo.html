@@ -1,5 +1,5 @@
-<!doctype html>
-<html class="no-js" lang="en">
+<!DOCTYPE html>
+<html lang = "en-us">
 
 <head>
   <meta charset="utf-8" />
@@ -7,11 +7,17 @@
   <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
   <!-- Add icon library -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/hotels.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type= "text/javascript" src="assets/javascript/thingstodo.js"></script>
+    <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+  
 
   <div class="title-bar" data-responsive-toggle="realEstateMenu" data-hide-for="small">
     <button class="menu-icon" type="button" data-toggle></button>
@@ -28,20 +34,36 @@
 
       </ul>
     </div>
-    <!--
-      <div class="top-bar-right">
-        <ul class="menu">
-          <li><a href="#">My Account</a></li>
-          <li><a class="button">Login</a></li>
-        </ul>
-      </div>
-
-    -->
-      
+   
   </div>
 
+<h1> Things to Do at your Destination! </h1>
+
+<form>
+  
+  <div class="form-row align-items-center">
+    <div class="col-sm-6 my-1">
+      <label class="sr-only" for="inlineFormInputName"></label>
+      <input type="text" class="form-control" id="inlineFormInputName" placeholder="Enter Destination">
+    </div>
+
+    <div class="col-auto my-1">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
   </div>
- 
+</form>
+
+
+<h2>Tours</h2>
+<h2>Restaurants</h2>
+<!--map, tours, activities restaurants, 
+search bar, enter destination. links of popular destinations below
+once hit search 
+header will pop up with destination you chose
+then links for map, tours, activities, restaurnts will appear
+when you click on each it will take you to external link?-->
+
+
   <footer>
     <div class="row expanded callout secondary">
       <div class="small-6 large-3 columns">
@@ -90,11 +112,7 @@
       </div>
     </div>
   </footer>
-  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-  <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
-  <script>
-    $(document).foundation();
-  </script>
+
 </body>
 
 </html>
