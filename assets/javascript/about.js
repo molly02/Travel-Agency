@@ -12,7 +12,10 @@ function searchLocations(location) {
 
     .then(function(response) {
         console.log(response);
-        var locationName = $("<h1>").text(response);
+       //var locDiv = $("<div class='loca'>");
+      // var names = response.data.name;
+        var locationName = $("<h1>").text(JSON.stringify(response));
+        //locDiv.append(locationName);
 
         $("#locations-appear-here").empty();
         $("#locations-appear-here").append(locationName);
@@ -36,8 +39,7 @@ function searchLocations(location) {
     $("button").on("click", function(){
 
     var location = $(this).attr("data-location");
-    
-  var queryURL = "https://www.triposo.com/api/20181213/tour.json?annotate=trigram:" + location + "&trigram=%3E0.2&account=YLSBAM48&token=fld3ii4oj15xegxsnyj5a8iwppb2bgou"
+    var queryURL = "https://www.triposo.com/api/20181213/tour.json?annotate=trigram:" + location + "&trigram=%3E0.2&account=YLSBAM48&token=fld3ii4oj15xegxsnyj5a8iwppb2bgou"
     console.log (queryURL);
 
     //queryurll="https://www.triposo.com/api/20181213/tour.json?annotate=trigram:Amsterdam&trigram=%3E0.2&account=Bwilkie91&token=jtxzznrrzatq62syjh1v3dv4uynh15sp"
