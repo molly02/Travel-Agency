@@ -28,6 +28,7 @@ function displayFlightInfo() {
         }).then(function(response) {
             //$(".subheader-flights").text(JSON.stringify(response));
             for(var i = 0; i < 50; i++){
+                var entryRow = $("<tr>").addClass();
                 var rowNumber = $("<td>").addClass("p-rownumber").text(i);
                 var pOrigin = $("<td>").addClass("p-origin").text(response.data.onwardflights[i].origin);
                 var pDestination = $("<td>").addClass("p-destination").text(response.data.onwardflights[i].destination);
@@ -43,7 +44,8 @@ function displayFlightInfo() {
                 var pDepTerminal = $("<td>").addClass("p-depterminal").text(response.data.onwardflights[i].depterminal);
                 var pArrTerminal = $("<td>").addClass("p-arrterminal").text(response.data.onwardflights[i].arrterminal);
                 var pDuration = $("<td>").addClass("p-duration").text(response.data.onwardflights[i].duration);
-                $(".flights-table-body").append(rowNumber, pOrigin, pDestination, pAirline, pCarrierId, pFlightNo, pBookingClass, pSeatingClass, pDepDate, pDepTime, pArrDate, pArrTime, pDepTerminal, pArrTerminal, pDuration);
+                entryRow.append(rowNumber, pOrigin, pDestination, pAirline, pCarrierId, pFlightNo, pBookingClass, pSeatingClass, pDepDate, pDepTime, pArrDate, pArrTime, pDepTerminal, pArrTerminal, pDuration);
+                $(".flights-table-body").append(entryRow);
             }
             
             console.log(response);
