@@ -14,7 +14,7 @@
     }
     .card {
         margin: 10px;
-        background: honeydew;
+        background: whitesmoke;
         color: purple;
     }
 
@@ -26,10 +26,12 @@
         margin-right: 0px;
         margin-top: 10px;
         margin-bottom: 10px;
-
     }
 
-  
+  #empty-space {
+      width: 100vw;
+      height: 80vh;
+  }
     
     #location-input {
         width: 30%;
@@ -44,7 +46,7 @@
     }
 
 
-    footer{
+    footer {
         margin-bottom: 0%;
         bottom: 0px;
     }
