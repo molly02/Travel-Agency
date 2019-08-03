@@ -26,7 +26,27 @@ function displayFlightInfo() {
             url: queryURL,
             method: "GET"
         }).then(function(response) {
-            $(".subheader-flights").text(JSON.stringify(response));
+            //$(".subheader-flights").text(JSON.stringify(response));
+            for(var i = 0; i < 50; i++){
+                var rowNumber = $("<td>").addClass("p-rownumber").text(i);
+                var pOrigin = $("<td>").addClass("p-origin").text(response.data.onwardflights[i].origin);
+                var pDestination = $("<td>").addClass("p-destination").text(response.data.onwardflights[i].destination);
+                var pAirline = $("<td>").addClass("p-airline").text(response.data.onwardflights[i].airline);
+                var pCarrierId = $("<td>").addClass("p-carrierid").text(response.data.onwardflights[i].carrierid);
+                var pFlightNo = $("<td>").addClass("p-flightno").text(response.data.onwardflights[i].flightno);
+                var pBookingClass = $("<td>").addClass("p-bookingclass").text(response.data.onwardflights[i].bookingclass);
+                var pSeatingClass = $("<td>").addClass("p-seatingclass").text(response.data.onwardflights[i].seatingclass);
+                var pDepDate = $("<td>").addClass("p-depdate").text(response.data.onwardflights[i].depdate);
+                var pDepTime = $("<td>").addClass("p-deptime").text(response.data.onwardflights[i].deptime);
+                var pArrDate = $("<td>").addClass("p-arrdate").text(response.data.onwardflights[i].arrdate);
+                var pArrTime = $("<td>").addClass("p-arrtime").text(response.data.onwardflights[i].arrtime);
+                var pDepTerminal = $("<td>").addClass("p-depterminal").text(response.data.onwardflights[i].depterminal);
+                var pArrTerminal = $("<td>").addClass("p-arrterminal").text(response.data.onwardflights[i].arrterminal);
+                var pDuration = $("<td>").addClass("p-duration").text(response.data.onwardflights[i].duration);
+                $(".flights-table-body").append(rowNumber, pOrigin, pDestination, pAirline, pCarrierId, pFlightNo, pBookingClass, pSeatingClass, pDepDate, pDepTime, pArrDate, pArrTime, pDepTerminal, pArrTerminal, pDuration);
+            }
+            
+            console.log(response);
         });
 }
 $("#flight-form").on("submit", displayFlightInfo);
