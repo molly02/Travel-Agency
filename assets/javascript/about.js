@@ -18,8 +18,8 @@ function searchLocations(location) {
     for (var i = 0; i < results.length; i++) {
         // separate rows, ,ed etc.
        var card = $("<div>").addClass("row small-up-1 medium-up-2 large-up-3").addClass("small-up-1");
-       var cardCol = $("<div>").addClass("column");
-       var cardCall = $("<div>").addClass("callout");
+       //var cardCol = $("<div>").addClass("column");
+       var cardCall = $("<div>").addClass("column callout");
        // use for css card title, can change p tag to what i need
        var title = $("<h3>").addClass("card-title").text(results[i].name);
     //var link = $("<a>").attr("href",results[i].vendor_tour_url).text(title);
@@ -30,7 +30,7 @@ function searchLocations(location) {
       var link = $("<a>").attr("href",results[i].vendor_tour_url).text("Find out More!");
       
        // add in order what to appear on card next links
-        card.append(cardCol);
+        //card.append(cardCol);
         card.append(cardCall);
         cardCall.append(title, image, price, link);
 

@@ -19,11 +19,13 @@
     }
 
     .callout {
-        width: 40%;
+        display: block;
+        width: 30%;
         background: whitesmoke;
         margin: 25px;
         margin-top: 5px;
         margin-bottom: 5px;
+
     }
 
   
