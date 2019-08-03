@@ -1,9 +1,5 @@
-
 $(document).ready(function () {
-	queryurl="https://www.triposo.com/api/20181213/tour.json?annotate=trigram:Amsterdam&trigram=%3E0.2&account=Bwilkie91&token=jtxzznrrzatq62syjh1v3dv4uynh15sp"
-	console.log (queryurl)
-	
-	var movies = ["New York", "Miami", "Baltimore", "Chicago"];
+	var movies = ["Sheraton", "Hyatt Regency Chicago", "Marriott Hotels"];
 	var movie = [];
 	// Add buttons for original movies array
 	function renderButtons() {
@@ -53,8 +49,8 @@ $(document).ready(function () {
 				var movieDiv = $('<div>');
 				var link = $("<a>");
 				link.attr("href", "https://www.google.com/maps/search/" + movie + "/@42.0846639,-87.935583,10z");
-				link.attr("title", "For Hotels link it");
-				link.text("For Hotels link it");
+				link.attr("title", "www.google.com");
+				link.text("Click Here For Hotels");
 				link.addClass("link");
 				var movieImg = $("<img>");
 				movieImg.attr("src", results[i].urls.regular);
@@ -72,25 +68,5 @@ $(document).ready(function () {
 
 
 
-
-  //  queryURL = "https://app.ticketmaster.com/discovery/v2/attractions?apikey=7elxdku9GGG5k8j0Xm8KWdANDgecHMV0&locale=*"
-
-    
-  //  console.log(queryURL);
-//})
-
-//$.ajax({
-   // url: queryURL,
-   // method: "GET"
-//})
-
-
-// SAVE THIS TO LOCAL BEFORE MERGING!!
-
-// look at past api examples
-// search by city
-// search by artist or game
-// theater, sports, concerts
-// show popular acts shows before search
 
 
