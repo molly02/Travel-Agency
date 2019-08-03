@@ -5,12 +5,10 @@ function createElement (results) {
         
     for (var i = 0; i < results.length; i++) {
        var card = $("<div>").addClass("column callout small-up-1 medium-up-2 large-up-3");
-       //var cardCol = $("<div>").addClass("column");
        var cardCall = $("<div>")
        var title = $("<h3>").addClass("card-title").text(results[i].name);
        var image = $("<img>").attr("src", results[i].images["0"].source_url);
        var price = $("<p>").addClass("card-title").text("Price: " + results[i].price.amount + " " + results[i].price.currency);
-       //open link in new tab?
        var link = $("<a>").attr("href",results[i].vendor_tour_url).text("Find out More!");
         card.append(cardCall);
         cardCall.append(title, image, price, link);
@@ -47,11 +45,6 @@ function searchLocations(location) {
     var queryURL = "https://www.triposo.com/api/20181213/tour.json?annotate=trigram:" + location + "&trigram=%3E0.2&account=YLSBAM48&token=fld3ii4oj15xegxsnyj5a8iwppb2bgou"
     console.log (queryURL);
 
-    //queryurll="https://www.triposo.com/api/20181213/tour.json?annotate=trigram:Amsterdam&trigram=%3E0.2&account=Bwilkie91&token=jtxzznrrzatq62syjh1v3dv4uynh15sp"
-    //console.log (queryurll)
-    
-    //fld3ii4oj15xegxsnyj5a8iwppb2bgou
-   
     $.ajax({
         url: queryURL,
         method: "GET"
