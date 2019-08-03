@@ -4,27 +4,28 @@
         <meta charset="utf-8" />
         <title>Brahms Travel Agency</title>
         <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <!-- Add icon library -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/hotels.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </head>
     <body>
-        <div class="title-bar" data-responsive-toggle="realEstateMenu" data-hide-for="small">
-            <button class="menu-icon" type="button" data-toggle></button>
-            <div class="title-bar-title">Menu</div>
-        </div>
         <div class="top-bar" id="realEstateMenu">
             <div class="top-bar-left">
-                <ul class="menu" data-responsive-menu="accordion">
-                    <li class="menu-text">Home</li>
-                    <li><a href="flights.html">Flights</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="hotels.html">Hotels</a></li>
-                    <li><a href="thingstodo.html">Things To Do</a></li>
-                
-                </ul>
+              <ul class="menu" data-responsive-menu="accordion">
+                <li class="menu-text">Your Journey Starts Here</li>
+                <li><a href="flights.html">Flights</a></li>
+                <li><a href="hotels.html">Hotels</a></li>
+                <li><a href="about.html">Tours</a></li>
+              </ul>
             </div>
+            <div class="top-bar-right">
+              <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+              </ul>
+            </div>
+          </div>
             <!--
                 <div class="top-bar-right">
                     <ul class="menu">
@@ -52,7 +53,7 @@
 
             <div class="medium-5 large-3 columns">
                 <div class="callout secondary">
-                    <form>
+                    <form id="flight-form">
                         <div class="row">
                             <div class="-12 columns">
                                 <label>Find Your Dream Place
@@ -92,38 +93,88 @@
             </div>
         </div>
         <div class="row column">
+            <p class="leada">Flight Information</p>
             <hr>
         </div>
-      
-
-                <div class="medium-6 columns">
-                    <ul class="menu float-center">
-                        <li class="menu-text">&copy; 2019 By BraHMS Team</li>
-                    </ul>
-                </div>
+        <!-- <div class="row small-up-1 medium-up-2 large-up-3">
+            <div class="column" style="width: -webkit-fill-available; overflow-wrap: break-word;">
+                <tr class="callout">
+                    <td class="header-flights">Flights</td>
+                    <td class="subheader-flights"></td>
+                </tr>
             </div>
-        </footer>
+        </div> -->
+        <table class="table">
+            <thead>Flights
+                <tr class="flights-table-header">
+                    <th scope="col">#</th>
+                    <th scope="col">Origin</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Airline</th>
+                    <th scope="col">Carrier ID</th>
+                    <th scope="col">Flight No.</th>
+                    <th scope="col">Booking Class</th>
+                    <th scope="col">Seating Class</th>
+                    <th scope="col">Departure Date</th>
+                    <th scope="col">Departure Time</th>
+                    <th scope="col">Arrival Date</th>
+                    <th scope="col">Arrival Time</th>
+                    <th scope="col">Departure Terminal</th>
+                    <th scope="col">Arrival Terminal</th>
+                    <th scope="col">Duration</th>
+                </tr>
+            </thead>
+            <tbody class="flights-table-body">
+            </tbody>
+        </table>
+        <div class="card">
+            <div class="card-body">
+        
+          <footer>
+            <div class="small-6 large-3 columns">
+              <p class="lead">Home</p>
+              <ul class="menu vertical">
+                <li><a href="flights.html">Flights</a></li>
+                <li><a href="hotels.html">Hotels</a></li>
+                <li><a href="about.html">Tours</a></li>
+              </ul>
+            </div>
+        
+        
+            <div class="small-6 large-3 columns">
+              <p class="lead">Find Us on Social Media</p>
+              <ul class="menu vertical">
+                  <li><a href="http://facebook.com"><i class="fa fa-facebook"></i> Facebook</a></li>
+                  <li><a href="http://instagram.com"><i class="fa fa-instagram"></i> Instagram</a></li>
+              </ul>
+            </div>
+        
+            <div class="small-6 large-3 columns">
+              <ul class="menu vertical">
+                <p>Brahms Travel Agency</p>
+                <p>(555) 555-5555</p>
+                <p> 339 East Chicago Avenue. Chicago, IL 60611</p>
+                
+              </ul>
+            </div>
+            <br>
+              <div class="row">
+            
+                <div class="medium-6 columns">
+                  <ul class="menu float-center">
+                    <li class="menu-text">&copy; 2019 By BraHMS Team</li>
+                  </ul>
+                </div>
+              </div>
+          </footer>
+          </div>
+        </div>
         
         <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
         <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
-        <script>
+        <script src="assets/javascript/flights.js"></script>
+        <!-- <script>
             $(document).foundation();
-            /*
-            $(document).ready(function() {
-                var flight;
-                var queryURL;
-                $.ajax({
-                    url: queryURL,
-                    method: "GET"
-                }).then(function(response) {
-                    // $().text(JSON.stringify(response));
-                });
-            });
-            */
-         
-     <div>
-     
-      </div>
-        </script>
+        </script> -->
     </body>
 </html>
