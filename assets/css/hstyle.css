@@ -1,21 +1,18 @@
 
 body {
-	background-color: aqua;
+	background-color: darkkhaki;
 }
 .jumbotron{
 	/*padding: 1%;*/
 	background-color: #5cb85c;
 	color: #ffffff;
 	background-image: url(https://architecturetourchicago.com/wp-content/uploads/2018/04/town-night-chicago-states-united-the-river1.jpg);
-	background-size: cover ;
+	background-size: auto ;
 }
-
-
-#movies{
+#movies {
 	padding: 3%;
-	float: left;
+	/* float: left; */
 	}
-
 button {
     background-color: #5cb85c;
 	color: #ffffff;
@@ -23,3 +20,8 @@ button {
 .alls{
 	float: left;
 }
+img{
+    vertical-align: middle;
+    width: 65%;
+    padding: 3%;
+	}

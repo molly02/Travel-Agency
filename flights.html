@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Brahms Travel Agency</title>
+        <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+        <!-- Add icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/hotels.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body>
+        <div class="title-bar" data-responsive-toggle="realEstateMenu" data-hide-for="small">
+            <button class="menu-icon" type="button" data-toggle></button>
+            <div class="title-bar-title">Menu</div>
+        </div>
+        <div class="top-bar" id="realEstateMenu">
+            <div class="top-bar-left">
+                <ul class="menu" data-responsive-menu="accordion">
+                    <li class="menu-text">Home</li>
+                    <li><a href="flights.html">Flights</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="hotels.html">Hotels</a></li>
+                    <li><a href="thingstodo.html">Things To Do</a></li>
+                
+                </ul>
+            </div>
+            <!--
+                <div class="top-bar-right">
+                    <ul class="menu">
+                        <li><a href="#">My Account</a></li>
+                        <li><a class="button">Login</a></li>
+                    </ul>
+                </div>
+
+            -->
+      
+        </div>
+
+        <br>
+        <div class="row">
+            <div class="medium-7 large-6 columns">
+                <!-- <h1>Close Your Eyes and Open Your Mind</h1>
+                    <br>
+                    <br>
+                    <br><br><br><br><br><br><br>
+                    <button class="button">Take a Tour</button>
+                    <button class="button">Start a free trial</button>
+                
+                -->
+            </div>
+
+            <div class="medium-5 large-3 columns">
+                <div class="callout secondary">
+                    <form>
+                        <div class="row">
+                            <div class="-12 columns">
+                                <label>Find Your Dream Place
+                                    <input type="text" placeholder="Search destinations">
+                                </label>
+                            </div>
+                            <div class="small-12 columns">
+                                <label>Origin
+                                    <input type="text" id="origin" placeholder="Origin Airport code required, should be a valid IATA code">
+                                </label>
+                                <label>Destination
+                                    <input type="text" id="destination" placeholder="Destination Airport code required, should be a valid IATA code">
+                                </label>
+                                <label>Departure Date
+                                    <input type="date" id="departure-date" placeholder="Departure Date required">
+                                </label>
+                                <label>Arrival Date
+                                    <input type="date" id="arrival-date" placeholder="Arrival Date required">
+                                </label>
+                                <label>Class of Travel
+                                    <input type="text" id="class-of-travel" placeholder="Travel class/cabin required">
+                                </label>
+                                <label>Adults
+                                    <input type="number" id="numAdults" placeholder="number of adults">
+                                </label>
+                                <label>Children
+                                    <input type="number" id="numChildren" placeholder="number of children">
+                                </label>
+                                <label>Infants
+                                    <input type="number" id="numInfants" placeholder="number of infants">
+                                </label>
+                                <button type="submit" class="button">Search Now!</button>
+                            </div>
+                        </div>  
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row column">
+            <hr>
+        </div>
+      
+
+                <div class="medium-6 columns">
+                    <ul class="menu float-center">
+                        <li class="menu-text">&copy; 2019 By BraHMS Team</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+        <script>
+            $(document).foundation();
+            /*
+            $(document).ready(function() {
+                var flight;
+                var queryURL;
+                $.ajax({
+                    url: queryURL,
+                    method: "GET"
+                }).then(function(response) {
+                    // $().text(JSON.stringify(response));
+                });
+            });
+            */
+        </script>
+    </body>
+</html>
