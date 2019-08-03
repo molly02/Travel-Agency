@@ -4,8 +4,7 @@
     
     body {
         background-image: url(https://architecturetourchicago.com/wp-content/uploads/2018/04/town-night-chicago-states-united-the-river1.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
+        background-repeat: round;
     
     }
     body, html {
