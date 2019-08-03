@@ -11,14 +11,32 @@ function searchLocations(location) {
     })
 
     .then(function(response) {
-        console.log(response);
-       //var locDiv = $("<div class='loca'>");
-      // var names = response.data.name;
-        var locationName = $("<h1>").text(JSON.stringify(response));
-        //locDiv.append(locationName);
+        console.log(response.results);
+        var results = response.results;
+        $("#location").empty();
+        
+    for (var i = 0; i < results.length; i++) {
+        // separate rows, ,ed etc.
+       var card = $("<div>").addClass("row small-up-1 medium-up-2 large-up-3").addClass("small-up-1");
+       var cardCol = $("<div>").addClass("column");
+       var cardCall = $("<div>").addClass("callout");
+       // use for css card title, can change p tag to what i need
+       var title = $("<h3>").addClass("card-title").text(results[i].name);
+    //var link = $("<a>").attr("href",results[i].vendor_tour_url).text(title);
+       var image = $("<img>").attr("src", results[i].images["0"].source_url);
+       var price = $("<p>").addClass("card-title").text("Price: " + results[i].price.amount + " " + results[i].price.currency);
+       //var currency = $("<p>").addClass("card-title").text(results[i].price.currency);
+       //open link in new tab?
+      var link = $("<a>").attr("href",results[i].vendor_tour_url).text("Find out More!");
+      
+       // add in order what to appear on card next links
+        card.append(cardCol);
+        card.append(cardCall);
+        cardCall.append(title, image, price, link);
 
-        $("#locations-appear-here").empty();
-        $("#locations-appear-here").append(locationName);
+        $("#location").append(card);
+    }
+      
      });
     }
 
@@ -27,14 +45,6 @@ function searchLocations(location) {
         var inputLocations = $("#location-input").val().trim();
         searchLocations(inputLocations);
     })
-    
-
-
-
-
-
-
-
 
     $("button").on("click", function(){
 
@@ -53,27 +63,35 @@ function searchLocations(location) {
     })
 
     .then(function(response){
-       console.log(queryURL);
-       console.log(response);
 
-        var results = response.data;
+        var results = response.results;
 
-        $("#locations-appear-here").empty();
+        $("#location").empty();
 
-        for (var i = 0; i < results; i++) {
-            var resultsDiv = $("<div>");
-            var p = $("<p>").text("Results: " + results[i]);
-            var testing = results[i].name.url;
 
-            resultsDiv.attr("src", testing);
-            resultsDiv.addClass("location");
-            resultsDiv.append(p);
-            resultsDiv.append(testing);
-
-            $("#locations-appear-here").append(resultsDiv);
-
+        for (var i = 0; i < results.length; i++) {
+            // separate rows, ,ed etc.
+            var card = $("<div>").addClass("row small-up-1 medium-up-2 large-up-3").addClass("small-up-1");
+            var cardCol = $("<div>").addClass("column");
+            var cardCall = $("<div>").addClass("callout");
+            // use for css card title, can change p tag to what i need
+            var title = $("<h3>").addClass("card-title").text(results[i].name);
+         //var link = $("<a>").attr("href",results[i].vendor_tour_url).text(title);
+            var image = $("<img>").attr("src", results[i].images["0"].source_url);
+            var price = $("<p>").addClass("card-title").text("Price: " + results[i].price.amount + " " + results[i].price.currency);
+            //var currency = $("<p>").addClass("card-title").text(results[i].price.currency);
+            //open link in new tab?
+           var link = $("<a>").attr("href",results[i].vendor_tour_url).text("Find out More!");
+           
+            // add in order what to appear on card next links
+             card.append(cardCol);
+             card.append(cardCall);
+             cardCall.append(title, image, price, link);
+     
+             $("#location").append(card);
+    
         }
-
+  
     })
 
     })
