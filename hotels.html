@@ -4,6 +4,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Hotels</title>
+	<link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
 		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="assets/css/hstyle.css">
@@ -12,6 +14,21 @@
 </head>
 
 <body>
+	<div class="top-bar" id="realEstateMenu">
+		<div class="top-bar-left">
+			<ul class="menu" data-responsive-menu="accordion">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="flights.html">Flights</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="hotels.html">Hotels</a></li>
+		
+
+			</ul>
+		</div>
+
+	</div>
+
+	</br>
 	<div class="container">
 		<div style="background-image: url(https://i.ytimg.com/vi/YebDcZPMc_4/maxresdefault.jpg); height: 30%; width: 100%;"
 			class="jumbotron text-center">
@@ -24,7 +41,9 @@
 			</div>
 			<div class="col-sm-4">
 				<form id="form">
-					<label for="movie-input">Add a Hotel</label><br>
+					<label for="movie-input">
+						<h3 id="addHotel">Add a Hotel</h3>
+					</label><br>
 					<input type="text" id="movie-input">
 					<input id="add-movie" type="button" value="Submit">
 				</form>
@@ -33,13 +52,51 @@
 			<div class="lg-12">
 				<div id="movies">
 				</div>
-
-
 			</div>
-			<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js">
-			</script>
-			<script type="text/javascript" src="assets/javascript/hotels.js">
-			</script>
+		</div>
+	</div>
+	<footer>
+		<div class="small-6 large-3 columns">
+			<p class="lead"><strong>Home</strong></p>
+			<ul class="menu vertical">
+				<li><a href="flights.html"><span> Flights</span></a></li>
+				<li><a href="hotels.html"><span>Hotels</span> </a></li>
+				<li><a href="about.html"><span> Tours</span></a></li>
+			</ul>
+		</div>
+
+
+		<div class="small-6 large-3 columns">
+			<p class="lead"><strong>Find Us on Social Media</strong> </p>
+			<ul class="menu vertical">
+				<li><a href="http://facebook.com"><i class="fa fa-facebook"></i><span>Facebook</span> </a></li>
+				<li><a href="http://instagram.com"><i class="fa fa-instagram"></i><span>Instagram</span> </a></li>
+			</ul>
+		</div>
+
+		<div class="small-6 large-3 columns">
+			<p class="lead"><strong>Brahms Travel Agency</strong> </p>
+			<ul class="menu vertical">
+				<li><span>(555) 555-5555</span> </li>
+				<li><span>339 East Chicago Avenue. Chicago, IL 60611</span> </li>
+
+			</ul>
+		</div>
+		<br>
+		<div class="row">
+
+			<div class="medium-6 columns">
+				<ul class="menu float-center">
+					<li class="menu-text">&copy; 2019 By BraHMS Team</li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js">
+	</script>
+	<script type="text/javascript" src="assets/javascript/hotels.js">
+	</script>
+
 </body>
 
 </html>
