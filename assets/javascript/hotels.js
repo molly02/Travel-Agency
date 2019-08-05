@@ -47,7 +47,7 @@ $(document).ready(function () {
 			$("#movies").empty();
 			for (var i = 0; i < results.length; i++) {
 				var movieDiv = $('<div>');
-				var link = $("<a>");
+				var link = $('<a target="_blank">');
 				link.attr("href", "https://www.google.com/maps/search/" + movie + "/@42.0846639,-87.935583,10z");
 				link.attr("title", "www.google.com");
 				link.text("Click Here For Hotels");
