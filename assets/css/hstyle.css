@@ -36,7 +36,8 @@ button {
 }
 img{
     vertical-align: middle;
-    width: 65%;
+	width: 65%;
+	height: 65%;
     padding: 3%;
 	}
 
@@ -52,7 +53,11 @@ input[type="text"]
     font-size:24px;
 }
 a {
-	color: rgb(30, 74, 216);
+	color: aliceblue;
 	font-size:20px;
 
+}
+span{
+	color: rgb(30, 74, 216);
+	font-size:20px;
 }
