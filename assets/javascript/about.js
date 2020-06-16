@@ -18,7 +18,8 @@ function createElement (results) {
 
 function searchLocations(location) {
 
-    var queryURL = "https://www.triposo.com/api/20181213/tour.json?annotate=trigram:" + location + "&trigram=%3E0.2&account=YLSBAM48&token=fld3ii4oj15xegxsnyj5a8iwppb2bgou"
+    var queryURL = "https://www.#.com/api/20181213/tour.json?annotate=trigram:" + location + "&trigram=%3E0.2&account=YLSBAM48&token=fld3ii4oj15xegxsnyj5a8iwppb2bgou"
+    //triposo
     console.log (queryURL);
 
     $.ajax({
@@ -42,7 +43,8 @@ function searchLocations(location) {
     $("button").on("click", function(){
 
     var location = $(this).attr("data-location");
-    var queryURL = "https://www.triposo.com/api/20181213/tour.json?annotate=trigram:" + location + "&trigram=%3E0.2&account=YLSBAM48&token=fld3ii4oj15xegxsnyj5a8iwppb2bgou"
+    var queryURL = "https://www.#.com/api/20181213/tour.json?annotate=trigram:" + location + "&trigram=%3E0.2&account=YLSBAM48&token=fld3ii4oj15xegxsnyj5a8iwppb2bgou"
+    // triposo
     console.log (queryURL);
 
     $.ajax({

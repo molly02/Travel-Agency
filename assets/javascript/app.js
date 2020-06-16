@@ -1,6 +1,7 @@
 
 $(document).ready(function () {
-	queryurl="https://www.triposo.com/api/20181213/tour.json?annotate=trigram:Amsterdam&trigram=%3E0.2&account=Bwilkie91&token=jtxzznrrzatq62syjh1v3dv4uynh15sp"
+	queryurl="https://www.#.com/api/20181213/tour.json?annotate=trigram:Amsterdam&trigram=%3E0.2&account=Bwilkie91&token=jtxzznrrzatq62syjh1v3dv4uynh15sp"
+	//triposo
 	console.log (queryurl)
 	
 	var movies = ["New York", "Miami", "Baltimore", "Chicago"];
